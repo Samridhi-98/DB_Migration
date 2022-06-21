@@ -1,6 +1,8 @@
 plugins {
-    id 'java'
+    id 'org.springframework.boot' version '2.7.0'
     id "org.flywaydb.flyway" version "8.5.12"
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
 }
 
 flyway {
@@ -19,6 +21,8 @@ repositories {
 
 dependencies {
     implementation 'org.postgresql:postgresql:42.3.6'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
