@@ -11,8 +11,11 @@ public class User {
     @Column(name = "id", nullable = false)
     private long id;
 
-    @Column(name="name", nullable = false)
-    private String name;
+    @Column(name="full_name", nullable = false)
+    private String full_name;
+
+    @Column(name = "phone_no")
+    private long phone_no;
 
     @Column(name = "address", nullable = false)
     private String address;
